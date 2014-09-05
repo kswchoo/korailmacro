@@ -2,17 +2,20 @@
   "manifest_version": 2,
   "name": "Korail Macro",
   "description": "KORAIL 자동 예약 매크로",
-  "version": "1.0",
+  "version": "1.1",
   "permissions": [
-    "http://www.korail.com/"
+    "http://www.letskorail.com/"
   ],
   "content_scripts": [ {
     "all_frames": true,
     "js": ["jquery-1.11.0.min.js", "content.js"],
-    "matches": ["http://www.korail.com/*"],
+    "matches": ["http://www.letskorail.com/*"],
     "run_at": "document_end"
   }],
+  "background": {
+    "page": "background.html"
+  },
   "web_accessible_resources": [
-    "inject.js", "macro.gif", "macrostop.gif"
+    "inject.js", "macro.gif", "macrostop.gif", "tada.mp3"
   ]
 }
