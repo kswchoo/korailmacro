@@ -1,27 +1,27 @@
 Korail Macro
 ============
 
-Korail Macro is a Chrome extension for make KORAIL train reservation.
+Korail Macro는 매진된 열차표를 구하는 것을 도와드리는 크롬 확장기능입니다.
 
-Korail Macro는 코레일 철도예약을 위한 크롬 확장기능입니다.
+설치 방법
+-------
+구글의 정책 변경으로 기존에 제공되던 crx파일로 설치는 더이상 동작하지 않습니다.
 
-Install and Usage
------------------
-Install `korailmacro.crx` to your Chrome web browser.
+**[Chrome Web Store에서 확인하기](https://chrome.google.com/webstore/detail/korail-macro/nfmdeemncclfiaeppedpkaekjhceffka)**
 
-After install this extension, you may see purple-colored button on train schedule inquiry page. (http://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do)
 
-Just adjust inquiry options properly, and click "매크로조회" button. (Yeah, purple-colored one.) Your browser will refresh immediately and refreshes until it takes a ticket.
+사용 방법
+--------
+크롬 확장기능을 설치한 후, [Lets Korail](http://www.letskorail.com)의 열차 조회 페이지를 방문해 보시면 ![매크로시작버튼](https://raw.githubusercontent.com/kswchoo/korailmacro/master/macro.gif) 버튼이 생긴 것을 확인할 수 있습니다. 원하는 열차만 리스팅되도록 검색조건을 조정한 후, 매크로조회 버튼을 눌러두면 확장기능이 페이지를 계속 갱신하면서 **해당 페이지에 처음으로** 나타난 일반석 좌석을 예약합니다.
+
+예약이 되면 코레일 시스템상 10분 안에 결제를 하셔야 합니다. 예약완료시 사운드가 재생되므로 스피커를 켜 두시기를 권장합니다. 애써 구한 좌석이 취소되는 것을 방지하기 위하여 반드시 로그인한 상태로 사용하시길 권장합니다.
 
 License
 -------
 MIT License
 
-(Korean) FAQ
+FAQ
 ============
-#### 어떻게 쓰는건가요?
-먼저 자신의 ID로 Lets Korail에 로그인합니다. 그리고 예약 페이지 http://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do 로 들어갑니다. 원하는 조건의 승차권이 검색되도록 검색조건을 조정합니다. 그리고 조회버튼 오른쪽에 있는 "매크로 조회" 버튼을 누릅니다. 이제 매크로가 계속 페이지를 갱신하면서 목록에서 가장 처음으로 나오는 일반석 좌석이 있으면 예약을 하고 사운드를 재생합니다.
-
 #### 아무리 해도 좌석이 안나와요. 어떻게 된 일이죠? 
 코레일에서 예약대기를 받아 둔 경우, 예약대기자에게 좌석을 먼저 배정합니다. 최선의 결과를 위해, 예약대기를 받지 않는 출발 하루 전에 시도하시는 것을 권장합니다.
 
