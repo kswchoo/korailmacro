@@ -6,16 +6,13 @@ function injectJs(srcFile) {
     document.getElementsByTagName('head')[0].appendChild(scr);
 }
 
-
-
 var dsturl1 = "http://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do";
 var dsturl2 = "http://www.letskorail.com/ebizprd/EbizPrdTicketpr21100W_pr21110.do";
 if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 	document.URL.substring(0, dsturl2.length) == dsturl2) {
 
 	$(document).ready(function() {
-
-	injectJs(chrome.extension.getURL('inject.js'));
+		injectJs(chrome.extension.getURL('inject.js'));
 
 		if (localStorage.getItem('macro') == "true") {
 			$(".btn_inq").append('<a href="#" onclick="macrostop();" style="font-size:15px; margin-left:5px;"><img src="' + chrome.extension.getURL('btn_stop.png') + '"></a>');
@@ -25,7 +22,6 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 		}
 
 		if (localStorage.getItem('macro') == "true") {
-
 			if ($("#divResult").length != 0) {
 				var rows = $('#divResult > table.tbl_h tr');
 
