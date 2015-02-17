@@ -16,6 +16,6 @@
     "page": "background.html"
   },
   "web_accessible_resources": [
-    "inject.js", "macro.gif", "macrostop.gif", "tada.mp3"
+    "inject.js", "btn_start.png", "btn_stop.png", "tada.mp3"
   ]
 }
