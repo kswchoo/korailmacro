@@ -1,3 +1,6 @@
+window.showModalDialog = window.showModalDialog || function(url, arg, opt) {
+	window.open(url, arg, opt);
+};
 
 function macro() {
 	coachSelected = [].map.call(document.querySelectorAll('.coachMacro:checked'), function (select) {
