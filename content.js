@@ -6,6 +6,15 @@ function injectJs(srcFile) {
     document.getElementsByTagName('head')[0].appendChild(scr);
 }
 
+function redirectPage(href) {
+	if (href.indexOf("javascript:") == 0) {
+		href = "window.showModalDialog=window.showModalDialog || function(url, arg, opt) {window.open(url, arg, opt);};window.confirm=function (str) {return true;};" + href.substring(11, href.length);
+		location.href = "javascript:" + href;
+	} else {
+		location.href = href;
+	}
+}
+
 var dsturl1 = "http://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do";
 var dsturl2 = "http://www.letskorail.com/ebizprd/EbizPrdTicketpr21100W_pr21110.do";
 if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
@@ -79,7 +88,7 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 								img = $(coachSpecials[j]).children('img');
 								src = $(img).attr('src');
 								if (src == "/docs/2007/img/common/icon_apm_yes.gif") {
-									location.href = $(coachSpecials[j]).attr('href');
+									redirectPage($(coachSpecials[j]).attr('href'));
 									succeed = true;
 									break;
 								}
@@ -95,7 +104,7 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 								img = $(firstSpecials[j]).children('img');
 								src = $(img).attr('src');
 								if (src == "/docs/2007/img/common/icon_apm_spe_yes.gif") {
-									location.href = $(firstSpecials[j]).attr('href');
+									redirectPage($(coachSpecials[j]).attr('href'));
 									succeed = true;
 									break;
 								}
