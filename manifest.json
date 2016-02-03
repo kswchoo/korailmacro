@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Korail Macro",
   "description": "KORAIL 자동 예약 매크로",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "permissions": [
     "http://www.letskorail.com/"
   ],
