@@ -8,7 +8,7 @@ function injectJs(srcFile) {
 
 function redirectPage(href) {
 	if (href.indexOf("javascript:") == 0) {
-		href = "window.showModalDialog=window.showModalDialog || function(url, arg, opt) {window.open(url, arg, opt);};window.confirm=function (str) {return true;};" + href.substring(11, href.length);
+		href = "window.showModalDialog=window.showModalDialog || function(url, arg, opt) {window.open(url, arg, opt);};window.confirm=function (str) {return true;};infochk=function(a,b){infochk2(a,b);};" + href.substring(11, href.length);
 		location.href = "javascript:" + href;
 	} else {
 		location.href = href;
