@@ -87,7 +87,7 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 							for (j = 0; j < coachSpecials.length; j++) {
 								img = $(coachSpecials[j]).children('img');
 								src = $(img).attr('src');
-								if (src == "/docs/2007/img/common/icon_apm_yes.gif") {
+								if (src == "/docs/2007/img/common/icon_apm_bl.gif" || src == "/docs/2007/img/common/icon_apm_rd.gif") {
 									redirectPage($(coachSpecials[j]).attr('href'));
 									succeed = true;
 									break;
@@ -103,7 +103,7 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 							for (j = 0; j < firstSpecials.length; j++) {
 								img = $(firstSpecials[j]).children('img');
 								src = $(img).attr('src');
-								if (src == "/docs/2007/img/common/icon_apm_spe_yes.gif") {
+								if (src == "/docs/2007/img/common/icon_apm_bl.gif" || src == "/docs/2007/img/common/icon_apm_rd.gif") {
 									redirectPage($(coachSpecials[j]).attr('href'));
 									succeed = true;
 									break;
