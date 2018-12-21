@@ -8,7 +8,7 @@ function injectJs(srcFile) {
 
 function redirectPage(href) {
 	if (href.indexOf("javascript:") == 0) {
-		href = "window.showModalDialog=window.showModalDialog || function(url, arg, opt) {window.open(url, arg, opt);};window.confirm=function (str) {return true;};infochk=function(a,b){infochk2(a,b);};" + href.substring(11, href.length);
+		href = "window.showModalDialog=window.showModalDialog || function(url, arg, opt) {window.open(url, arg, opt);};window.confirm=function (str) {return true;};" + href.substring(11, href.length);
 		location.href = "javascript:" + href;
 	} else {
 		location.href = href;
@@ -87,7 +87,7 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 							for (j = 0; j < coachSpecials.length; j++) {
 								img = $(coachSpecials[j]).children('img');
 								src = $(img).attr('src');
-								if (src == "/docs/2007/img/common/icon_apm_bl.gif" || src == "/docs/2007/img/common/icon_apm_rd.gif") {
+								if (src == "/docs/2007/img/common/icon_apm_seatmap_yes.gif") {
 									redirectPage($(coachSpecials[j]).attr('href'));
 									succeed = true;
 									break;
@@ -103,8 +103,8 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 							for (j = 0; j < firstSpecials.length; j++) {
 								img = $(firstSpecials[j]).children('img');
 								src = $(img).attr('src');
-								if (src == "/docs/2007/img/common/icon_apm_bl.gif" || src == "/docs/2007/img/common/icon_apm_rd.gif") {
-									redirectPage($(coachSpecials[j]).attr('href'));
+								if (src == "/docs/2007/img/common/icon_apm_seatmap_yes.gif") {
+									redirectPage($(firstSpecials[j]).attr('href'));
 									succeed = true;
 									break;
 								}
