@@ -1,4 +1,4 @@
-// http://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do
+// https://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do
 
 function injectJs(srcFile) {
     var scr = document.createElement('script');
@@ -15,8 +15,8 @@ function redirectPage(href) {
 	}
 }
 
-var dsturl1 = "http://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do";
-var dsturl2 = "http://www.letskorail.com/ebizprd/EbizPrdTicketpr21100W_pr21110.do";
+var dsturl1 = "https://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do";
+var dsturl2 = "https://www.letskorail.com/ebizprd/EbizPrdTicketpr21100W_pr21110.do";
 if (document.URL.substring(0, dsturl1.length) == dsturl1 ||
 	document.URL.substring(0, dsturl2.length) == dsturl2) {
 
